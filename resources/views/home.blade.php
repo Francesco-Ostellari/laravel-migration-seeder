@@ -2,19 +2,21 @@
 
 @section('content')
   @foreach ($trains as $train)
-    <div>
-      <h1>TRENO: </h1>
-      <div>Azienda: {{ $train->agency }}</div>
-      <div>Stazione di partenza: {{ $train->departure_station }}</div>
-      <div>Stazione di arrivo: {{ $train->arrival_station }}</div>
-      <div>Data di partenza: {{ $train->departure_date }}</div>
-      <div>Data di arrivo: {{ $train->arrival_date }}</div>
-      <div>Orario di partenza: {{ $train->departure_time }}</div>
-      <div>Orario di arrivo: {{ $train->arrival_time }}</div>
-      <div>Codice treno: {{ $train->train_code }}</div>
-      <div>Numero carrozze: {{ $train->carriages }}</div>
-      <div>In orario: {{ $train->on_time }}</div>
-      <div>Cancellato: {{ $train->delete }}</div>
-    </div>
+    <ul>
+      <li>
+        <h1>TRENO: </h1>
+      </li>
+      <li>Azienda: {{ $train->agency }}</li>
+      <li>Stazione di partenza: {{ $train->departure_station }}</li>
+      <li>Stazione di arrivo: {{ $train->arrival_station }}</li>
+      <li>Data di partenza: {{ $train->departure_date }}</li>
+      <li>Data di arrivo: {{ $train->arrival_date }}</li>
+      <li>Orario di partenza: {{ $train->departure_time }}</li>
+      <li>Orario di arrivo: {{ $train->arrival_time }}</li>
+      <li>Codice treno: {{ $train->train_code }}</li>
+      <li>Numero carrozze: {{ $train->carriages }}</li>
+      <li>In orario: {{ $train->on_time }}</li>
+      <li>Cancellato: {{ $train->delete }}</li>
+    </ul>
   @endforeach
 @endsection
