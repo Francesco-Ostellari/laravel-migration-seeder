@@ -15,8 +15,16 @@
       <li>Orario di arrivo: {{ $train->arrival_time }}</li>
       <li>Codice treno: {{ $train->train_code }}</li>
       <li>Numero carrozze: {{ $train->carriages }}</li>
-      <li>In orario: {{ $train->on_time }}</li>
-      <li>Cancellato: {{ $train->delete }}</li>
+      <li>
+        @if ($train->on_time == false)
+          Treno non in orario
+        @else
+          Treno in orario
+        @endif
+      </li>
+      @if ($train->delete == true)
+      <li>Treno cancellato</li>
+      @endif
     </ul>
   @endforeach
 @endsection
