@@ -1,1 +1,7 @@
-//
+@import '~bootstrap/scss/bootstrap';
+
+.card {
+  background-color: lightgreen;
+  width: 300px;
+  list-style-type: none;
+}

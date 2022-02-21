@@ -10,9 +10,12 @@ class TrainController extends Controller
 {
     public function index()
     {
-        $trains = Train::where ('departure_date', '>=', Carbon::today())->get();
-        $data = ["trains"=>$trains];
-
-        return view ("home", $data);
+        $trains = Train::where('departure_date', '>=', Carbon::today())->get();
+        $data = ['trains' => $trains];
+        return view('home', $data);
+    }
+    public function show(Train $train)
+    {
+        return view('show', compact('train'));
     }
 }
